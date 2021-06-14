@@ -1,0 +1,7 @@
+#$ -S /bin/tcsh
+#$ -j y
+#$ -cwd
+#$ -m n
+#$ -l h_rt=86400
+#$ -pe openmpi 128
+mpiexec --tag-output -n $NSLOTS /fs/pool/pool-bmsan-apps/pytom/develop/hpcl34/pytom/bin/pytom /fs/fs04/lv01/home/b_baumei/luiskuhn/projects/gpd/lib/polysomeDetection/scripts/erDetect.py ../../../datasets/inVitro/MOTL_1.0_mirr_scaled.xml ../../../datasets/inVitro/poly_MOTL_1.xml 2.3 500 100.0

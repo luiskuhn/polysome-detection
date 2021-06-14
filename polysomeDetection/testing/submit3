@@ -1,0 +1,7 @@
+#$ -S /bin/tcsh
+#$ -j y
+#$ -cwd
+#$ -m n
+#$ -l h_rt=86400
+#$ -pe openmpi 64
+mpiexec --tag-output -n $NSLOTS /fs/pool/pool-bmsan-apps/pytom/develop/hpcl34/pytom/bin/pytom paraTest3.py 
